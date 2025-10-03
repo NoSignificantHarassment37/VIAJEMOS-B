@@ -1,0 +1,32 @@
+* {
+    font-family: 'Montserrat', cursive;
+    box-sizing: border-box;
+}
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+main {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    align-items: center;
+}
+.small-icon{
+    width: clamp(1rem, 4vw, 2rem);
+}

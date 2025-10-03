@@ -1,0 +1,223 @@
+﻿/* ============================= */
+/* 📊 Comparador Vuelo + Hotel   */
+/* ============================= */
+.compare-packages {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #f9fafb;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+    .compare-packages h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        color: #1e293b;
+    }
+
+    /* Tabla */
+    .compare-packages table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1rem;
+    }
+
+    .compare-packages thead {
+        background: #FF7A59;
+        color: #fff;
+    }
+
+    .compare-packages th,
+    .compare-packages td {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .compare-packages tr:nth-child(even) {
+        background: #f1f5f9;
+    }
+
+    .compare-packages td strong {
+        color: #16a34a;
+    }
+
+/* ============================= */
+/* 🧮 Calculadora de ahorro       */
+/* ============================= */
+.savings-calculator {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+    .savings-calculator h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        color: #1e293b;
+    }
+
+    /* Formulario */
+    .savings-calculator form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .savings-calculator label {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        text-align: left;
+        color: #374151;
+    }
+
+    .savings-calculator input {
+        padding: 0.6rem;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        margin-top: 0.3rem;
+        font-size: 1rem;
+    }
+
+    .savings-calculator button {
+        background: #FF7A59;
+        color: white;
+        border: none;
+        padding: 0.7rem 1.2rem;
+        border-radius: 10px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.25s ease, transform 0.15s ease;
+    }
+
+        .savings-calculator button:hover {
+            background: #e86848;
+            transform: translateY(-2px);
+        }
+
+        .savings-calculator button:active {
+            transform: scale(0.98);
+        }
+
+/* Resultado */
+#calcResult {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #16a34a;
+}
+
+/* Estilo para la 2 seccion de Paquetes de Vuelo + Hotel */
+.featured-packages {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #f8f9fa;
+}
+
+    .featured-packages h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #003366;
+    }
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.package {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+    .package:hover {
+        transform: translateY(-8px);
+    }
+
+    .package img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+    }
+
+    .package h3 {
+        font-size: 1.25rem;
+        color: #222;
+    }
+
+    .package p {
+        margin: 0.5rem 0;
+        color: #555;
+    }
+
+    .package .price {
+        font-size: 1.1rem;
+        color: #0077b6;
+        font-weight: bold;
+    }
+
+    .package .btn-primary {
+        margin-top: 1rem;
+        background: #0077b6;
+        color: #fff;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .package .btn-primary:hover {
+            background: #005f87;
+        }
+
+
+/* ============================= */
+/* 📱 Responsivo                 */
+/* ============================= */
+@media (max-width: 768px) {
+    .compare-packages table,
+    .compare-packages thead,
+    .compare-packages tbody,
+    .compare-packages th,
+    .compare-packages td,
+    .compare-packages tr {
+        display: block;
+        width: 100%;
+    }
+
+    .compare-packages tr {
+        margin-bottom: 1rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 1rem;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .compare-packages th {
+        display: none; /* Oculta encabezado en móvil */
+    }
+
+    .compare-packages td {
+        text-align: left;
+        padding: 0.5rem 0;
+    }
+
+    .savings-calculator {
+        padding: 1.5rem;
+    }
+}

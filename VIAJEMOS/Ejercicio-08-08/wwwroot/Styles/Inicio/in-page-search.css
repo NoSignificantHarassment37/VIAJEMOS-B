@@ -1,0 +1,126 @@
+/*
+    Este archivo maneja los estilos para el bloque de formularios.
+    Está dividido en: 
+    .table__header: contenedor de los botones de navegacion
+    .table__body: Contenedor padre de todos los formularios.
+    .table: '.form-body' + '.form-header'.
+*/
+.table * {
+    font-family: 'Montserrat', none;
+}
+/* --- @media --- */
+    /* --- generales form --- */
+.table__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+}
+        @media(min-width: 401px){
+            .table__form-fieldset {
+                width: 100%;
+                display: grid;
+                gap: 2%;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                padding: clamp(0rem, 3%, 1rem);
+            }
+            .table__form-fieldset > *{
+                max-width: 100%;
+                min-width: 0;
+            }
+        }
+        @media(max-width: 400px){
+            .table__form-fieldset{
+                width: 100%;
+                display:flex;
+                flex-direction: column;
+            }
+            .table__form-fieldset > * {
+                flex: 1;
+                margin: 1%;
+            }
+        }
+        .table__search-button {
+            font-family: 'Limelight', cursive;
+            width: clamp(4rem, 10%, 10rem);
+            align-self: center;
+            margin: 1%;
+            padding: 1%;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .table__form-input{
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid black; 
+        }
+/* /// generales form /// */
+/* /// @media /// */
+/* --- cuerpo de la tabla --- */
+.table__body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 65%;
+    position: relative;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #004d80, #3399ff);
+    overflow-y: scroll;
+}
+/* /// cuerpo de la tabla /// */
+/* --- general de la tabla --- */
+.table{
+    color: white;
+    width: 50vw;
+    height: 50vh;
+}
+#table__form-2-container,#table__form-3-container,#table__form-4-container{
+    display:none;
+}
+.table__form-container{
+    width: 100%;
+    height: 100%;
+}
+/* /// general de formularios /// */
+/* --- Navegacion de la tabla --- */
+
+.table__navigation-container li {
+    justify-content: center;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #003366;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.table__navigation-container > li:hover {
+    transform: scale(1.05);
+    background-color: #004d80;
+}
+
+.table__navigation-container li > p {
+    font-size: clamp(1rem, 1vw, 2rem);
+    overflow-wrap: anywhere;
+}
+
+.table__navigation-container {
+    gap: 1vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.table__navigation {
+    height: fit-content;
+}
+#table__form-2 {
+    width: 100%;
+    height: 100%;
+}
+/* /// Navegacion de la tabla /// */
